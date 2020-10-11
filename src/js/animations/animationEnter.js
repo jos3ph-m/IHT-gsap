@@ -17,11 +17,14 @@ const animationEnter = (container) => {
     .fromTo(
       activeLink,
       { xPercent: -101 },
-      { xPercent: 0, transformOrigin: 'left' },
-      0
+      { xPercent: 0,
+        transformOrigin: 'left' },
+      0,
     )
-    .from(images, { xPercent: -101, stagger: 0.1 }, 0)
-    .from(img, { xPercent: 101, stagger: 0.1 }, 0);
+    .from(images, { xPercent: -101,
+      stagger: 0.1 }, 0)
+    .from(img, { xPercent: 101,
+      stagger: 0.1 }, 0);
 };
 
 export default animationEnter;
