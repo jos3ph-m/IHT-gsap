@@ -1,6 +1,6 @@
 import barba from '@barba/core';
 import gsap from 'gsap/gsap-core';
-import { animationEnter, animationLeave } from './animations';
+import { revealProject, leaveToProject, leaveFromProject, animationEnter, animationLeave } from './animations';
 
 const resetActiveLink = () => {
   gsap.set('a.is-active span', {
