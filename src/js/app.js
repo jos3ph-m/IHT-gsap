@@ -28,15 +28,6 @@ barba.init({
       enter({ next }) {
         animationEnter(next.container);
       },
-    }, 
-    // {
-    //   name: 'detail',
-    //   to: {
-    //     namespace: ['detail'],
-    //   },
-    //   once({ next }) {
-    //     revealProject(next.container);
-    //   },
-    // },
+    },
   ],
 });

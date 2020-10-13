@@ -8,7 +8,7 @@ const animationEnter = (container) => {
 
   const tl = gsap.timeline({
     defaults: {
-      duration: 1,
+      duration: 0.9,
       ease: 'power4.out',
     },
   });

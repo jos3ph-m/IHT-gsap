@@ -34,7 +34,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@barba/core": "^2.8.0",
+    "@barba/core": "^2.9.7",
     "gsap": "^3.5.1",
     "reset-css": "^5.0.1"
   }
