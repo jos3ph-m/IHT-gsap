@@ -1,6 +1,6 @@
 import barba from '@barba/core';
 import gsap from 'gsap/gsap-core';
-import { revealProject, leaveToProject, leaveFromProject, animationEnter, animationLeave } from './animations';
+import { animationEnter, animationLeave } from './animations';
 
 const resetActiveLink = () => {
   gsap.set('a.is-active span', {
@@ -13,6 +13,7 @@ const resetActiveLink = () => {
 barba.init({
   transitions: [
     {
+      name: 'general-transition',
       once({ next }) {
         resetActiveLink();
         gsap.from('header a', {
@@ -27,6 +28,15 @@ barba.init({
       enter({ next }) {
         animationEnter(next.container);
       },
-    },
+    }, 
+    // {
+    //   name: 'detail',
+    //   to: {
+    //     namespace: ['detail'],
+    //   },
+    //   once({ next }) {
+    //     revealProject(next.container);
+    //   },
+    // },
   ],
 });
