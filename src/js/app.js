@@ -9,6 +9,11 @@ const resetActiveLink = () => {
   });
 };
 
+barba.hooks.enter(() => {
+  console.log('enter');
+  window.scrollTo(0, 0)
+});
+
 // we need to wait for the animation to finish before enter animation plays
 barba.init({
   transitions: [
@@ -17,7 +22,7 @@ barba.init({
       once({ next }) {
         resetActiveLink();
         gsap.from('header a', {
-          duration: 0.5,
+          duration: 0.6,
           yPercent: 100,
           stagger: 0.2,
           ease: 'power1.out',
