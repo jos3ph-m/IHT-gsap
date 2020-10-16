@@ -17,7 +17,7 @@ barba.init({
       once({ next }) {
         resetActiveLink();
         gsap.from('header a', {
-          duration: 0.6,
+          duration: 0.5,
           yPercent: 100,
           stagger: 0.2,
           ease: 'power1.out',
