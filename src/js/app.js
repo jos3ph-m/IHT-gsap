@@ -23,7 +23,7 @@ barba.init({
         resetActiveLink();
         gsap.from('header a', {
           duration: 0.6,
-          yPercent: 100,
+          yPercent: 120,
           stagger: 0.2,
           ease: 'power1.out',
           onComplete: () => animationEnter(next.container),
