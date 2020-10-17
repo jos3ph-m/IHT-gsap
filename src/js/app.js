@@ -16,6 +16,14 @@ barba.hooks.enter(() => {
 
 // we need to wait for the animation to finish before enter animation plays
 barba.init({
+  views: [
+    {
+      namespace: 'architecture',
+      beforeEnter(data) {
+        console.log(data, 'beforeEnter architecture');
+      }
+    }
+  ],
   transitions: [
     {
       name: 'general-transition',
