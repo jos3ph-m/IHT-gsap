@@ -1,6 +1,17 @@
 import barba from '@barba/core';
+import barbaRouter from '@barba/router'
 import gsap from 'gsap/gsap-core';
 import { revealProject, leaveToProject, leaveFromProject, animationEnter, animationLeave } from './animations';
+
+const myRoutes = [
+  { name: 'home', path: '/index.html' },
+  { name: 'architecture', path: '/architecture.html' },
+  { name: 'detail', path: '/detail-page.html' },
+]
+
+barba.use(barbaRouter, {
+  routes: myRoutes
+})
 
 const resetActiveLink = () => {
   gsap.set('a.is-active span', {
@@ -9,8 +20,8 @@ const resetActiveLink = () => {
   });
 };
 
-barba.hooks.enter(() => {
-  console.log('enter');
+barba.hooks.enter((data) => {
+  console.log(data);
   window.scrollTo(0, 0)
 });
 
